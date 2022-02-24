@@ -1,8 +1,6 @@
-package Algorithms;
-
 import java.util.Scanner;
 
-/**Задача №223. Линейный поиск - 1
+/** Задача №223. Линейный поиск - 1
  Ввод и вывод данных производятся через стандартные потоки ввода-вывода.
  Напишите программу, которая определяет, сколько раз встречается заданное число x в данном массиве.
 
@@ -26,8 +24,22 @@ import java.util.Scanner;
  */
 
 public class LinearSearch1 {
-    Scanner scn = new Scanner(System.in);
-    int N = scn.nextInt();
-    int[] arr = new int[N];
-    for (int i=0, i < arr.length; )
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int N = scn.nextInt();
+        int[] arr = new int[N];
+        for (int i = 0; i < arr.length; i++){
+            arr[i] = scn.nextInt();
+        }
+        int x = scn.nextInt();
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (x == arr[i]){
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+
+
 }
